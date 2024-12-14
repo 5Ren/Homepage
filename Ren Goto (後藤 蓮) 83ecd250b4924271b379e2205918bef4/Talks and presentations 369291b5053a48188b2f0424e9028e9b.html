@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Talks and presentations</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="369291b5-053a-4818-8b2f-0424e9028e9b" class="page sans"><header><h1 class="page-title">Talks <strong>and presentations</strong></h1><p class="page-description"></p></header><div class="page-body"><hr id="a7bada2a-788d-40f1-862b-9b2ebf486caa"/><div id="9ee0412e-9518-4e32-9ca4-e33005c5f4ac" class="column-list"><div id="679ccdce-a73c-4317-98ec-ad956af0e1d5" style="width:20.00000000000001%" class="column"><p id="29e8b976-7e7d-4fd6-8bd8-ad58ada9bb3b" class=""><strong><a href="Publications%20c9490f09852a4357b08f0f2ff5b1d73d.html">Publications</a></strong></p></div><div id="a8300e74-8218-4ec8-8414-8eee7a30be37" style="width:20.00000000000001%" class="column"><p id="6dc09c01-7311-4515-9398-460dca37c7b1" class=""><strong>Talks</strong></p></div><div id="4b71cdaa-2ad2-4fef-9e4c-172f53452db5" style="width:20%" class="column"><p id="2dd2ef85-0803-41fe-9679-11c917a370c6" class=""><a href="Arts%206d3c6656cdad49adbbff5da772c98403.html">Arts</a></p></div><div id="84babe03-cfad-40fc-b80e-259470422cd7" style="width:20.000000000000018%" class="column"><p id="7ad11a85-1023-4bd1-bed2-3fc7d2489112" class=""><a href="CV%20a5cc2847807643e3b4321621df80cd0c.html">CV</a></p></div><div id="9e1ded72-1449-444f-bfd4-f1479e35f2c4" style="width:20.000000000000004%" class="column"><p id="11339dd0-ae03-4a34-a235-6e50e61ec031" class=""><a href="%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%83%85%E5%A0%B1%20375b82bfd13640049f69b5171f7bf15b.html">日本語情報</a></p></div></div><hr id="d912e8c4-8788-4bde-a1f3-7ebd941c2cd2"/><h1 id="d49d2d23-2c3d-46cc-9f94-2ae3d9e82655" class=""><strong><span style="border-bottom:0.05em solid">1. International Conference</span></strong></h1><h3 id="cdfc8e27-942f-4ead-bc84-a20203e15949" class="">One-step-process of re-entrant textures on transparent glass using direct laser interference processing</h3><p id="77df33ac-766a-4d2f-91f9-91ffb48b0dd8" class=""><mark class="highlight-gray"><strong>June, 11, 2024</strong></mark></p><p id="712f7d9b-59b2-4a57-9b21-cb30bfedde17" class="">Ren Goto, Masaki Yamaguchi<br/>Oral presentation at 25rd International Symposium on Laser Precision Microfabrication (LPM2024), Donostia-San Sebastián, Spain 🇪🇸<br/></p><h3 id="8709faf0-2dbd-4ed4-bd92-035a2e3afe82" class="">Laser-enabled surface treatment of medical device with superior drainage</h3><p id="9f324214-197a-43e5-866d-42b44a910c13" class=""><mark class="highlight-gray"><strong>June, 11, 2024</strong></mark></p><p id="6bbd0f79-6bdc-4341-9c49-deb69c9d1711" class="">Yuki Oshima, Ren Goto, Hidenori Shimada, Masaki Yamaguchi<br/>Oral presentation at 25rd International Symposium on Laser Precision Microfabrication (LPM2024), Donostia-San Sebastián, Spain 🇪🇸<br/></p><h3 id="64b27a64-8f3e-49f6-9086-220bf0c45e50" class="">Processing of Hydrophobic Micro-texture Based on Cassie Model Using Femtosecond-pulsed Laser</h3><p id="07eaccc2-6003-4c80-97c2-3d0b3fc829f0" class=""><mark class="highlight-gray"><strong>July, 24, 2023</strong></mark></p><p id="4e44a1c7-3fb8-4208-804f-f3b1b66b0f87" class="">Ren Goto, Masaki Yamaguchi<br/>Poster presentation at 45th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC2023), Sydney, Australia 🇦🇺<br/></p><h3 id="ef60eaf5-6baf-43bf-9ffe-038f1712343b" class="">Processing of biomimetic hydrophobic micro-textures using femtosecond-pulsed laser</h3><p id="fbef8b08-ea7f-47f3-8d48-5102d9f6515a" class=""><mark class="highlight-gray"><strong>June, 13, 2023</strong></mark></p><p id="ebc22865-d299-47b0-86a3-1a476ccbe98d" class="">Yuki Oshima, Ren Goto, Kenji Yanagisawa, Masaki Yamaguchi<br/>Poster presentation at 24th International Symposium on Laser Precision Microfabrication (LPM2023), Hirosaki, Japan 🇯🇵<br/></p><h3 id="15ba732b-536d-4f8e-8bb8-0dac5d72dcc5" class="">Fabrication of Omniphobic Surface Using Laser Interference Processing</h3><p id="9b551360-506b-491a-9d82-be9c2f7d0880" class=""><mark class="highlight-gray"><strong>June, 7, 2022</strong></mark></p><p id="e6a0ca0d-a981-4fd9-9984-e6895485d26a" class="">Ren Goto, Kenji Yanagisawa, Masaki Yamaguchi<br/>Poster presentation at 23rd International Symposium on Laser Precision Microfabrication (LPM2022), Dresden, Germany 🇩🇪 / Online<br/></p><h3 id="59f26f2a-cbdc-473d-aedc-3a4efd5ed9d8" class="">Relationship between CNT Orientation of Nanocarbon Fiber Silicone-matrix Composites and Sliding Property of Water Droplet</h3><p id="45864995-e36b-4a67-b990-38b6aa4c3984" class=""><mark class="highlight-gray"><strong>November, 22, 2021</strong></mark></p><p id="5ff3d40e-0a93-474a-b708-a530f0e67a0a" class="">Ren Goto, Kenji Yanagisawa<br/>Poster presentation at International Conference of “Science of Technology Innovation” 2021 (STI-gigaku 2021), Nagaoka, Japan 🇯🇵 / Online<br/></p><h3 id="acf9c3d2-46e9-4283-a0e1-ec7e504e0f09" class="">Analysis and Evaluation for Sliding Behavior of Water Droplets on Surface of Silicone sheets</h3><p id="17a8163f-53ae-46e8-a83b-5bc5a6ba4710" class=""><mark class="highlight-gray"><strong>November, 8, 2019</strong></mark></p><p id="336da571-37e8-4e36-b701-196a3e91f6f7" class="">Ren Goto, Chinatsu Saito, Yusuke Gomi, Kenji Yanagisawa, Hiroo Taura<br/>Poster presentation at International Conference of “Science of Technology Innovation” 2019 (STI-gigaku 2019), Nagaoka, Japan 🇯🇵<br/></p><h1 id="aaba5e51-551e-4bf7-aeac-4a545df59f3a" class=""><strong><span style="border-bottom:0.05em solid">2. Domestic Conference</span></strong></h1><h3 id="15467213-695c-808a-b8a5-d05653d805de" class="">データ駆動型サイエンスに基づいた撥水テクスチャのモデル構築</h3><p id="15467213-695c-80f4-9fba-d790e0bae06d" class=""><mark class="highlight-gray"><strong>2024.10.26</strong></mark></p><p id="15467213-695c-800c-b36c-d064abb40c40" class="">大島悠季, 後藤蓮, 山口昌樹<br/>口頭発表, 日本機械学会 [No.24-67] 第15回最適化シンポジウム2024 (OPTIS2024), 北海道大学札幌キャンパス<br/></p><h3 id="d4d26907-34bf-4fa8-be7f-7ae2949f4df5" class="">超撥液テクスチャのレーザー加工アルゴリズム</h3><p id="19d033cd-3005-4b92-8748-db8bc2feca88" class=""><mark class="highlight-gray"><strong>2024.6.21</strong></mark></p><p id="2a536b30-a25c-46dd-92c2-7f9329bb4895" class="">後藤蓮, 山口昌樹<br/>口頭発表, 日本トライボロジー学会 第11回 表面力研究会, 長野高専<br/></p><h3 id="3e0edb30-6e8e-4fdf-8326-7377349e560f" class="">生物模倣で形成した撥液テクスチャと液滴の撥液性との関連性の解明</h3><p id="41b83fe4-dd68-4791-a39e-6ae9c06c3759" class=""><mark class="highlight-gray"><strong>2023.11.06</strong></mark></p><p id="4af38e11-45bf-4e97-ad32-cd7fd13465ac" class="">大島悠季, 後藤蓮, 山口昌樹<br/>ポスター発表, Future Technologies from TOKUSHIMA 2023 電気学会 センサ・マイクロマシン部門 第40回「センサ・マイクロマシンと応用システム」シンポジウム, 熊本城ホール<br/></p><h3 id="74b5f713-3284-4631-b34d-97b8ac7bdf3d" class="">マイクロメートル領域の撥水テクスチャを実現するレーザー加工アルゴリズムの開発</h3><p id="b1371110-44de-4847-ac61-182318545ca9" class=""><mark class="highlight-gray"><strong>2022.11.14</strong></mark></p><p id="6be507d4-d568-4970-bcb9-0cd1870e262b" class="">大島悠季, 後藤蓮, 山口昌樹<br/>ポスター発表, Future Technologies from TOKUSHIMA 2022 電気学会 センサ・マイクロマシン部門 第39回「センサ・マイクロマシンと応用システム」シンポジウム, アスティとくしま<br/></p><h3 id="8ab16bdc-bd16-4069-974e-6c300c38220b" class="">レーザー干渉加工法による樹脂表面への撥液テクスチャリングの付与技術<br/>Texturing of Omniphobic Surface on Polymer Using Laser Interference Processing<br/></h3><p id="3def5822-0194-4dc2-a0be-133a85e1f7a4" class=""><mark class="highlight-gray"><strong>2022.09.11</strong></mark></p><p id="325671cd-6011-437b-9bb7-6ade8a8460dc" class="">後藤蓮, 山口昌樹<br/>口頭発表, 日本機械学会 [No.22-1] 2022 年度年次大会, 富山大学五福キャンパス<br/></p><figure id="2a341086-f290-46e6-bc0e-832296bf4ea8"><a href="https://doi.org/10.1299/jsmemecj.2022.J163-01" class="block-color-gray_background bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">レーザー干渉加工法による樹脂表面への撥液テクスチャリングの付与技術</div><div class="bookmark-description">Omniphobic surface, which has both hydrophobicity and oleophobicity, is needed as a technique of industrial application because liquid in the environm …</div></div><div class="bookmark-href"><img src="https://www.jstage.jst.go.jp/favicon.ico" class="icon bookmark-icon"/>https://doi.org/10.1299/jsmemecj.2022.J163-01</div></div><img src="https://www.jstage.jst.go.jp/html/images/common/SNS/J-STAGE_logo_sns.png" class="bookmark-image"/></a></figure><h3 id="c63d9cb5-4e89-48db-ba67-5ac200293c83" class="">滑水性シリコーン皮膜の開発<br/>Development of Silicone Film with Sliding Property of Water Droplet<br/></h3><p id="9a31536e-199f-4187-85a0-9c5e71595a20" class=""><mark class="highlight-gray"><strong>2020.11.06</strong></mark></p><p id="bc7ee8db-23e6-4fda-a861-69278715f64b" class="">後藤蓮, 柳澤憲史<br/>口頭発表, 日本機械学会 [No.21-61] 第20回機素潤滑設計部門講演会 (MDT2021), オンライン<br/></p><h3 id="51bcb54f-b7f9-4b58-8a48-94e227e93010" class="">シリコーン/CNT 複合シートの CNT 分散変化が滑水性に及ぼす影響<br/>Effect of CNT Dispersion of Nanocarbon Fiber Silicone-matrix Composites Sheet on Sliding Property of Water Droplet<br/></h3><p id="783245b8-d478-4720-8675-4f2a2ff045f0" class=""><mark class="highlight-gray"><strong>2020.09.13</strong></mark></p><p id="6300b727-5419-4cc4-a9f0-a8213167d35b" class="">後藤蓮, 柳澤憲史<br/>口頭発表, 日本機械学会 [No.20-1] 2020 年度年次大会, 名古屋大学東山キャンパス / オンライン<br/></p><figure id="6d8b21a6-2458-41ef-a516-aff7293d7ac0"><a href="https://doi.org/10.1299/jsmemecj.2020.J13110" class="block-color-gray_background bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">シリコーン／CNT複合シートのCNT分散変化が滑水性に及ぼす影響</div><div class="bookmark-description">The surface of silicone rubber composites sheet causes water droplet to be slipped with presence of VGCF (Vapor Growth Carbon Fiber). The availability …</div></div><div class="bookmark-href"><img src="https://www.jstage.jst.go.jp/favicon.ico" class="icon bookmark-icon"/>https://doi.org/10.1299/jsmemecj.2020.J13110</div></div><img src="https://www.jstage.jst.go.jp/html/images/common/SNS/J-STAGE_logo_sns.png" class="bookmark-image"/></a></figure><hr id="b2c25114-4224-42ec-980d-2e64daa728eb"/><div id="9bc95836-ee13-4ba2-9376-49d54f452059" class="column-list"><div id="67647446-174e-4554-8bfb-e0809beba816" style="width:33.333333333333336%" class="column"><p id="818c833f-03ff-4aef-b211-ab062cb16468" class=""><strong>Links</strong></p><p id="4a1b8895-1b66-4774-8af7-66b9650bfa49" class=""><a href="Publications%20c9490f09852a4357b08f0f2ff5b1d73d.html">Publications</a></p><p id="eb2b402f-05b9-439b-ac75-af6dd19f8f92" class=""><a href="Talks%20and%20presentations%20369291b5053a48188b2f0424e9028e9b.html">Talks</a></p><p id="ea659b34-956f-4769-8b4a-78b64c4e0164" class=""><a href="CV%20a5cc2847807643e3b4321621df80cd0c.html">CV</a></p><p id="d864b4f7-9be6-4386-8c3f-fb6b413c32e2" class=""><a href="Arts%206d3c6656cdad49adbbff5da772c98403.html">Arts</a></p><p id="5f69d672-de00-4bfc-9e96-24a5ffe006bf" class=""><a href="%E6%97%A5%E6%9C%AC%E8%AA%9E%E6%83%85%E5%A0%B1%20375b82bfd13640049f69b5171f7bf15b.html">日本語情報</a></p></div><div id="705f72b1-40fb-4ff3-8adc-d160c1afb519" style="width:33.333333333333336%" class="column"><p id="b932cef0-d1b2-4096-ae83-362179b49b7b" class=""><strong>Follow me</strong></p><p id="4bd6fbe6-5bf4-4254-b41b-72472501662b" class=""><a href="https://scholar.google.com/citations?hl=ja&amp;view_op=list_works&amp;gmla=AOAOcb2GGnNrex5BO9y16NKnybBeoA8dEAG0bJkwTMoLR7FrccCVDJYnZteQOG9nL9IdQEnnAgCnio5M_VltAkcTIzAJgd_f_jdGzHfbGoJG5j4&amp;user=kUyQ9e0AAAAJ">Google Scholar</a></p><p id="f9bbd6ed-40c2-46c0-b055-f6aa3facbc4e" class=""><a href="https://orcid.org/0009-0003-6648-1994">ORCID</a></p><p id="756dd768-e44e-485b-b744-dcc8e377e11c" class=""><a href="https://www.researchgate.net/profile/Ren-Goto">ReserchGate</a></p><p id="2f540b51-d3bc-4e5a-a26c-179d10b3d038" class=""><a href="https://github.com/5Ren">Github</a></p><p id="da7b6ca9-db99-4c04-91fe-fc86e70efc03" class="">
+</p></div><div id="895d0372-d529-4c0a-be9e-379c9431f7d8" style="width:33.33333333333333%" class="column"><p id="e20f69ab-1484-47f8-8a54-c264ec8aeca3" class=""><strong>Relevant Site</strong></p><p id="db6e68a9-a98e-44c2-a007-03810bcf75a7" class=""><a href="http://fiber.shinshu-u.ac.jp/yamaguchi/TOP.html">Yamaguchi Laboratory</a></p><p id="0462ec3f-ffa9-4816-8fbd-e96b73365daa" class=""><a href="https://www.shinshu-u.ac.jp/english/">Shinshu University</a></p></div></div><hr id="62a448e8-307a-4704-be84-1036b749312f"/><p id="15d10b07-f4b3-43c5-93cd-4dc4dd1b9de4" class=""><strong>© 2024 Ren Goto. All Rights Reserved.</strong></p><hr id="0462008d-622f-406c-889e-ad5b8929ee3a"/><p id="7503cf2d-cdcc-4638-b116-7b39ac8d0e11" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
